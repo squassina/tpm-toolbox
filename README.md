@@ -45,18 +45,21 @@ Teams:
 - Customer: is any individual - person, area, organization - that has a need that
   would be solved when we deliver this solution
 - TPM: or Technical Project Manager, is the person responsible for the communication
-  with the customer and the dev crew. The TPM will challenge the Dev Lead with questions
-  about the solution the dev crew will build
-- Dev Lead: a Senior developer acting as the technical advocate during the shape,
-  its position is not to be the manager of the team, but a peer that the team have
-  confidence and are open to discuss the different approaches
+with the customer and the dev crew. The TPM will challenge the Dev Lead with questions
+about the design and process regarding the solution the dev crew will build
+- Dev Lead: a Senior developer acting as the technical advocate during the shape
+phase. Their position is not to be the manager of the team, but a peer that the
+team has confidence in and are open to discuss various approaches. From what I
+noticed, when the manager is the Dev Lead, the team tends to simply accept what
+is being proposed, without further discussion, if the proposal comes from a peer,
+the discussions are much richer
 - SME: or Subject Matter Expert, is the person that has deep knowledge in a given
-  technology that will help the dev crew unblock the issues we are facing
+technology that will help the dev crew unblock the issues we are facing
 
 The matrix below provides a view where each role applies:
 
 | Phase | Customer | TPM | Dev Lead | Dev | SME |
-| --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: |
 | Game Plan | P | F | F | F | S |
 | Shape | P | F | F | | S |
 | Bet | F | F | F | F | |
@@ -69,8 +72,19 @@ The matrix below provides a view where each role applies:
 
 ## The proposal
 
-Each part is well defined in their respective documentation, so I'm focusing more
-on how I would use it in an engagement.
+Each phase is well defined in their respective documentation, so I'm focusing more on how I would use it in an engagement.
+
+The phase-to-document is as follows:
+
+- Game Plan: [High Level / Game Plan Design Recipe](https://microsoft.github.io/code-with-engineering-playbook/design/design-reviews/recipes/high-level-design-recipe/)  
+- Shape: [Shape Up Part 1: Shaping](https://basecamp.com/shapeup/1.1-chapter-02)  
+- Bet: [Shape Up Part 2: Betting](https://basecamp.com/shapeup/2.1-chapter-07)  
+- Build [Shape Up Part 3: Building](https://basecamp.com/shapeup/3.1-chapter-10)  
+- Refresh:
+  - [Shape Up Cool-down
+](https://basecamp.com/shapeup/2.2-chapter-08#cool-down)  
+  - [Technical Spike](https://microsoft.github.io/code-with-engineering-playbook/design/design-reviews/recipes/technical-spike/)  
+- Build Sprints: [Structure of a Sprint](https://microsoft.github.io/code-with-engineering-playbook/SPRINT-STRUCTURE/)  
 
 The initiator is the customer, that comes with a `request`. We analyze the `request`
 and create a `Game Plan` from it. The development of the `Game Plan` would take
@@ -81,7 +95,7 @@ go deeper in the area we will focus in the project, but learning and experimenti
 with the technology.
 
 By the time the `Game Plan` is approved, and while the dev crew are doing the `spikes`,
-the TPM, the Dev Lead and the customer, start thinking about what we want to deliver.
+the TPM, the Dev Lead and the customer, start thinking about how we want to deliver.
 From the `Game Plan` we have a macro view of the engagement until the final product
 is delivered, but what's in between? So we start to `Shape` the project.
 
@@ -124,9 +138,14 @@ other, but that won't take long. And we will focus on what really matters in the
 end.
 
 Notice that we won't have the sprint planning, as this was done in the `bet` phase,
-nor we have a backlog refinement, as there is no backlog. There is only pure tasks
-to deliver what was decided in the `bet` phase. When we finish the `build sprints`
-we will have delivered value to the solution.
+nor would we have a backlog refinement as there is no backlog. There are only the
+`user stories` and the related `tasks` to deliver what was decided in the `bet`
+phase. This was thought so the developers don’t need to worry about the next `shape`
+and its `build sprints`. When we finish the `build sprints` phase we would have
+delivered value to the solution.
+
+***"When you make a bet, you honor it. We do not allow the team to be interrupted
+or pulled away to do other things."***
 
 When we completed the `build sprints` phase we restart the circle, with a `refresh`
 phase that will work as a slow down period, when the team can prepare for the next
